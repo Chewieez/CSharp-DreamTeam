@@ -7,9 +7,11 @@ namespace dreamteam
     {
         static void Main(string[] args)
         {
-            List<Teammate> serverSide = new List<Teammate>();
-            List<Teammate> clientSide = new List<Teammate>();
+            // create two lists to hold two teams of 3 
+            List<ITeammate> serverSide = new List<ITeammate>();
+            List<ITeammate> clientSide = new List<ITeammate>();
 
+            // create new instances of each teammate class
             Greg Greg = new Greg();
             Krys Krys = new Krys();
             Kimmie Kimmie = new Kimmie();
@@ -17,6 +19,7 @@ namespace dreamteam
             Paul Paul = new Paul();
             Sean Sean = new Sean();
 
+            // add teammates to each of the two lists
             serverSide.Add(Paul);
             serverSide.Add(Garrett);
             serverSide.Add(Sean);
@@ -25,12 +28,14 @@ namespace dreamteam
             clientSide.Add(Krys);
             clientSide.Add(Kimmie);
 
-            foreach (Teammate teammate in serverSide)
+
+            // iterate over the lists and run each teammates work() method
+            foreach (ITeammate teammate in serverSide)
             {
                 teammate.Work();
             }
 
-            foreach (Teammate teammate in clientSide)
+            foreach (ITeammate teammate in clientSide)
             {
                 teammate.Work();
             }

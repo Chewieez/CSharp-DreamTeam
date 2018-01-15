@@ -4,4 +4,7 @@ public interface ITeammate
     string FirstName { get; set; }
     string LastName { get; set; }
     string FullName { get; }
+
+    void Work();
+    
 }

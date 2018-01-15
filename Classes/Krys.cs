@@ -1,11 +1,11 @@
 using System;
-public class Krys : Teammate, ITeammate
+public class Krys : ITeammate
 {
     public string Specialty { get; set; } = "CSS Animations";
     public string FirstName { get; set; } = "Krys";
     public string LastName { get; set; } = "Mathis";
     public string FullName { get => FirstName + " " + LastName; }
-    public override void Work()
+    public   void Work()
     {
         Console.WriteLine($"{FullName} will make all the {Specialty} on your project bounce, flash and fade.");
     }
